@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>simulate background-size:cover on <video></title>
+<style>
+.parent-element-to-video {
+  position: relative; /* or absolute or fixed */
+  overflow: hidden;
+}
+video {
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+     position: absolute;
+    left: 50%; /* % of surrounding element */
+    top: 50%;
+    transform: translate(-50%, -50%); /* % of current element */
+}
+</style>
+</head>
+<body>
+  <div class="parent-element-to-video">
+    <video id="vid" autoplay muted loop playsinline poster="/themes/custom/tour_eiffel/img/poster-tour-eiffel-jour-nuit.jpg">
+      <source src="https://github.com/florentroques/video-background-size-cover-simulation/blob/master/generique-goutte-eau-288p.mp4?raw=true" type="video/mp4" />
+      <source src="https://github.com/florentroques/video-background-size-cover-simulation/blob/master/generique-goutte-eau-288p.webm?raw=true" type="video/webm" />
+      <img src="/themes/custom/tour_eiffel/img/poster-tour-eiffel-jour-nuit.jpg" title="Dommage, votre navigateur ne supporte pas la balise <video>"  alt="eiffel-tower-by-day-and-night">
+    </video>
+  </div>
+</body>
+</html>
